@@ -166,4 +166,13 @@ Base: `/api`
 
 ---
 
+##  These are your actual website screenshots
+<img width="1917" height="888" alt="Screenshot 2026-01-03 173253" src="https://github.com/user-attachments/assets/853d1c8a-d270-4c29-8c49-7ce5d142708c" />
+<img width="1888" height="802" alt="Screenshot 2026-01-03 173355" src="https://github.com/user-attachments/assets/be820818-d245-4c4b-a7f2-c1e3063ce102" />
+<img width="1919" height="869" alt="Screenshot 2026-01-03 173318" src="https://github.com/user-attachments/assets/8cdab7f8-2583-4af3-bc04-be9b02013b78" />
+<img width="1891" height="852" alt="Screenshot 2026-01-03 173336" src="https://github.com/user-attachments/assets/9a6c674b-c654-487f-8e51-3957bc8b1f4f" />
+
+
+
+
 **Developed for Odoo Hackathon 2026**
