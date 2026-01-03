@@ -1,4 +1,9 @@
+import { useState } from "react";
+import CreateTripModal from "../components/CreateTripModal";
+
 const Trips = () => {
+  const [open, setOpen] = useState(false);
+
   return (
     <div>
       <div className="flex justify-between items-center mb-6">
@@ -9,7 +14,10 @@ const Trips = () => {
           </p>
         </div>
 
-        <button className="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700">
+        <button
+          onClick={() => setOpen(true)}
+          className="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700"
+        >
           + Create Trip
         </button>
       </div>
@@ -17,10 +25,13 @@ const Trips = () => {
       <div className="text-gray-500 italic">
         No trips created yet.
       </div>
+
+      {open && <CreateTripModal onClose={() => setOpen(false)} />}
     </div>
   );
 };
 
 export default Trips;
+
 
 
