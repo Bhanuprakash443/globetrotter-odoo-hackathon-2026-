@@ -1,8 +1,15 @@
 import { useState } from "react";
 import CreateTripModal from "../components/CreateTripModal";
+import TripCard from "../components/TripCard";
 
 const Trips = () => {
   const [open, setOpen] = useState(false);
+
+  const sampleTrip = {
+    name: "Goa Vacation",
+    destination: "Goa, India",
+    date: "2026-02-10",
+  };
 
   return (
     <div>
@@ -22,8 +29,8 @@ const Trips = () => {
         </button>
       </div>
 
-      <div className="text-gray-500 italic">
-        No trips created yet.
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <TripCard trip={sampleTrip} />
       </div>
 
       {open && <CreateTripModal onClose={() => setOpen(false)} />}
@@ -32,6 +39,7 @@ const Trips = () => {
 };
 
 export default Trips;
+
 
 
 
