@@ -1,12 +1,40 @@
-export default function Sidebar() {
+import { NavLink } from "react-router-dom";
+
+const Sidebar = () => {
+  const linkClass =
+    "block px-4 py-2 rounded text-white hover:bg-indigo-500 transition";
+
+  const activeClass = "bg-indigo-700 font-semibold";
+
   return (
-    <aside className="w-64 bg-indigo-600 text-white min-h-screen p-6">
-      <h2 className="text-2xl font-bold mb-8">GlobeTrotter</h2>
-      <nav className="space-y-4">
-        <a href="/dashboard" className="block hover:text-indigo-200">Dashboard</a>
-        <a href="#" className="block hover:text-indigo-200">Trips</a>
-        <a href="#" className="block hover:text-indigo-200">Profile</a>
+    <div className="w-64 bg-indigo-600 min-h-screen p-6">
+      <h1 className="text-2xl font-bold text-white mb-10">
+        GlobeTrotter
+      </h1>
+
+      <nav className="space-y-3">
+        <NavLink
+          to="/dashboard"
+          className={({ isActive }) =>
+            `${linkClass} ${isActive ? activeClass : ""}`
+          }
+        >
+          Dashboard
+        </NavLink>
+
+        <NavLink
+          to="/trips"
+          className={({ isActive }) =>
+            `${linkClass} ${isActive ? activeClass : ""}`
+          }
+        >
+          Trips
+        </NavLink>
       </nav>
-    </aside>
+    </div>
   );
-}
+};
+
+export default Sidebar;
+
+
